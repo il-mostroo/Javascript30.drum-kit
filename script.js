@@ -21,6 +21,7 @@ document.addEventListener("keypress", (e) => {
 function playSound(dataKey) {
   audios.forEach((audio) => {
     if (audio.dataset.key === dataKey) {
+      audio.currentTime = 0;
       audio.play();
     }
   });
